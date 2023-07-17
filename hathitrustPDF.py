@@ -15,7 +15,7 @@ def PDFDownload(output_line):
 
 # Get hathitrust book link
 link = "https://babel.hathitrust.org/cgi/pt?id=txu.059173023561817"
-id_book = re.findall('id=(\w*\.\d*)|$', link)[0]
+id_book = re.findall('id=(\w*\.\w*)|$', link)[0]
 r = requests.get(link)
 soup = BeautifulSoup(r.text, "html.parser")
 
